@@ -3,23 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sustainability Lab - Join Us</title>
-    <meta http-equiv="refresh" content="0; url=sustainability-lab-join-us-poster.html">
+    <title>Sustainability Lab - Join Us Poster</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: system-ui, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            font-family: 'Source Sans 3', system-ui, sans-serif;
+            background: linear-gradient(135deg, #0a1612 0%, #1a2f28 100%);
             min-height: 100vh;
-            margin: 0;
-            background: #0a1612;
-            color: #fff;
+            color: #e8f5e9;
+            padding: 3rem 1.5rem;
         }
-        a { color: #4ade80; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #4ade80, #22d3ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle {
+            text-align: center;
+            color: #94a3b8;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+        .subtitle a {
+            color: #4ade80;
+            text-decoration: none;
+        }
+        .subtitle a:hover { text-decoration: underline; }
+        .posters {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .poster-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .poster-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .poster-img {
+            width: 100%;
+            aspect-ratio: 1400/2080;
+            object-fit: cover;
+            display: block;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .poster-info {
+            padding: 1.5rem;
+        }
+        .poster-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .poster-links {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        .poster-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1rem;
+            background: rgba(74, 222, 128, 0.15);
+            color: #4ade80;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid rgba(74, 222, 128, 0.3);
+            transition: all 0.2s;
+        }
+        .poster-link:hover {
+            background: rgba(74, 222, 128, 0.25);
+            border-color: #4ade80;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        .footer a {
+            color: #4ade80;
+            text-decoration: none;
+        }
+        .footer a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
-    <p>Redirecting... <a href="sustainability-lab-join-us-poster.html">Click here</a> if not redirected.</p>
+    <div class="container">
+        <h1>Join the Sustainability Lab</h1>
+        <p class="subtitle">IIT Gandhinagar &bull; <a href="https://sustainability-lab.github.io" target="_blank">sustainability-lab.github.io</a></p>
+
+        <div class="posters">
+            <div class="poster-card">
+                <a href="sustainability-lab-join-us-poster.html">
+                    <img src="poster-dark.png" alt="Dark Theme Poster" class="poster-img">
+                </a>
+                <div class="poster-info">
+                    <h2 class="poster-title">Dark Theme</h2>
+                    <div class="poster-links">
+                        <a href="sustainability-lab-join-us-poster.html" class="poster-link">HTML</a>
+                        <a href="sustainability-lab-join-us-poster.pdf" class="poster-link">PDF</a>
+                        <a href="poster-dark.png" class="poster-link">PNG</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="poster-card">
+                <a href="sustainability-lab-join-us-poster-light.html">
+                    <img src="poster-light.png" alt="Light Theme Poster" class="poster-img">
+                </a>
+                <div class="poster-info">
+                    <h2 class="poster-title">Light Theme</h2>
+                    <div class="poster-links">
+                        <a href="sustainability-lab-join-us-poster-light.html" class="poster-link">HTML</a>
+                        <a href="sustainability-lab-join-us-poster-light.pdf" class="poster-link">PDF</a>
+                        <a href="poster-light.png" class="poster-link">PNG</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="footer">
+            <a href="https://github.com/nipunbatra/sustainability-lab-poster" target="_blank">View on GitHub</a>
+        </p>
+    </div>
 </body>
 </html>
