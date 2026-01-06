@@ -1,0 +1,16 @@
+{
+  "name": "sustainability-lab-poster",
+  "version": "1.0.0",
+  "description": "Sustainability Lab Recruitment Poster",
+  "type": "module",
+  "scripts": {
+    "generate": "make all",
+    "generate:dark": "make dark",
+    "generate:light": "make light",
+    "clean": "make clean",
+    "open": "make open"
+  },
+  "devDependencies": {
+    "puppeteer": "^23.0.0"
+  }
+}
