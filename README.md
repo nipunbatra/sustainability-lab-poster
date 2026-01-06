@@ -2,12 +2,26 @@
 
 Join Us recruitment poster for Sustainability Lab at IIT Gandhinagar.
 
+## Preview
+
+### Dark Theme
+![Dark Theme Poster](poster-dark.png)
+
+### Light Theme
+![Light Theme Poster](poster-light.png)
+
+## Live Preview
+
+View the interactive HTML versions:
+- [Dark Theme](https://nipunbatra.github.io/sustainability-lab-poster/sustainability-lab-join-us-poster.html)
+- [Light Theme](https://nipunbatra.github.io/sustainability-lab-poster/sustainability-lab-join-us-poster-light.html)
+
 ## Files
 
 - `sustainability-lab-join-us-poster.html` - Dark theme poster
 - `sustainability-lab-join-us-poster-light.html` - Light theme poster
-- `sustainability-lab-join-us-poster.pdf` - Dark theme PDF (generated)
-- `sustainability-lab-join-us-poster-light.pdf` - Light theme PDF (generated)
+- `sustainability-lab-join-us-poster.pdf` - Dark theme PDF
+- `sustainability-lab-join-us-poster-light.pdf` - Light theme PDF
 
 ## Generating PDFs
 
