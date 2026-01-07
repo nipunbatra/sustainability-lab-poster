@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability Lab - Join Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0a0e0a;
+            --bg-secondary: #111a11;
+            --bg-card: #1a231a;
+            --accent-green: #2d5a3d;
+            --accent-teal: #0d7a7a;
+            --accent-lime: #4a7c4a;
+            --text-primary: #e8ebe8;
+            --text-secondary: rgba(232, 235, 232, 0.75);
+            --text-muted: rgba(232, 235, 232, 0.5);
+            --border-light: rgba(255, 255, 255, 0.1);
+            --border-accent: rgba(45, 90, 61, 0.4);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        .poster {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 50px 60px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .header-tagline {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-lime);
+        }
+
+        .recruiting-badge {
+            font-size: 12px;
+            font-weight: 600;
+            color: #fff;
+            background: var(--accent-teal);
+            padding: 6px 14px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .main-title {
+            font-family: 'Source Serif 4', serif;
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 1;
+            color: var(--text-primary);
+            letter-spacing: -2px;
+            margin-bottom: 14px;
+        }
+
+        .subtitle {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 19px;
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin: 0 auto 14px;
+            line-height: 1.4;
+        }
+
+        .institution {
+            font-size: 14px;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .positions-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .position-tag {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-primary);
+            background: var(--accent-green);
+            padding: 8px 18px;
+            border-radius: 6px;
+        }
+
+        /* Venues bar */
+        .venues-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 35px;
+            padding: 18px 24px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+        }
+
+        .venues-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .venue-badge {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            background: var(--bg-card);
+            padding: 8px 14px;
+            border-radius: 6px;
+            border: 1px solid var(--border-light);
+        }
+
+        /* Awards row */
+        .awards-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 35px;
+        }
+
+        .award-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-left: 4px solid var(--accent-teal);
+            border-radius: 8px;
+            padding: 16px 18px;
+        }
+
+        .award-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+
+        .award-detail {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Work section */
+        .section-title {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 18px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 35px;
+        }
+
+        .work-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 22px;
+            text-align: center;
+        }
+
+        .work-card h3 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+
+        .work-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .work-venue {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent-teal);
+        }
+
+        /* Infrastructure */
+        .infra-bar {
+            background: linear-gradient(135deg, var(--accent-green), var(--accent-teal));
+            border-radius: 12px;
+            padding: 20px 28px;
+            margin-bottom: 35px;
+            text-align: center;
+        }
+
+        .infra-text {
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-accent);
+            border-radius: 16px;
+            padding: 35px 40px;
+            margin-bottom: 30px;
+        }
+
+        .cta-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .cta-title {
+            font-family: 'Source Serif 4', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .cta-title .highlight {
+            color: var(--accent-lime);
+        }
+
+        .cta-subtitle {
+            font-size: 16px;
+            color: var(--text-secondary);
+        }
+
+        .cta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+
+        .cta-column h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent-lime);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 14px;
+        }
+
+        .cta-list {
+            list-style: none;
+        }
+
+        .cta-list li {
+            font-size: 15px;
+            color: var(--text-secondary);
+            padding: 8px 0;
+            padding-left: 18px;
+            position: relative;
+            line-height: 1.4;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .cta-list li:last-child {
+            border-bottom: none;
+        }
+
+        .cta-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 14px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent-teal);
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .cta-button.primary {
+            background: var(--accent-green);
+            color: var(--text-primary);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-light);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .apply-note {
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .apply-note strong {
+            color: var(--text-secondary);
+        }
+
+        /* Supporters & Footer */
+        .footer-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .supporters {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .supporters-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .supporter {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .footer-url {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--accent-lime);
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-top">
+                <span class="header-tagline">AI for Sustainability</span>
+                <span class="recruiting-badge">Hiring Now</span>
+            </div>
+            <h1 class="main-title">Sustainability Lab</h1>
+            <p class="subtitle">Machine learning and sensing technologies for climate, health, and energy research</p>
+            <p class="institution">IIT Gandhinagar</p>
+            <div class="positions-bar">
+                <span class="position-tag">PhD Scholars</span>
+                <span class="position-tag">Postdocs</span>
+                <span class="position-tag">Research Associates</span>
+                <span class="position-tag">Interns</span>
+            </div>
+        </header>
+
+        <!-- Venues -->
+        <div class="venues-bar">
+            <span class="venues-label">Published at</span>
+            <span class="venue-badge">NeurIPS</span>
+            <span class="venue-badge">AAAI</span>
+            <span class="venue-badge">UbiComp</span>
+            <span class="venue-badge">KDD</span>
+            <span class="venue-badge">BuildSys</span>
+            <span class="venue-badge">JCSS</span>
+        </div>
+
+        <!-- Awards -->
+        <div class="awards-row">
+            <div class="award-card">
+                <div class="award-name">SIGEnergy Rising Star</div>
+                <div class="award-detail">Prof. Nipun Batra, 2025</div>
+            </div>
+            <div class="award-card">
+                <div class="award-name">Test of Time Award</div>
+                <div class="award-detail">NILMTK, 2025</div>
+            </div>
+            <div class="award-card">
+                <div class="award-name">Microsoft Research PhD</div>
+                <div class="award-detail">Zeel B Patel, 2024</div>
+            </div>
+            <div class="award-card">
+                <div class="award-name">Fulbright Fellowship</div>
+                <div class="award-detail">Rishiraj Adhikary, 2022</div>
+            </div>
+        </div>
+
+        <!-- Research Areas -->
+        <h2 class="section-title">What We Work On</h2>
+        <div class="work-grid">
+            <div class="work-card">
+                <h3>Air Quality & Climate</h3>
+                <p>Satellite CV for pollution monitoring, LLM-based policy support</p>
+                <span class="work-venue">NeurIPS, AAAI, JCSS</span>
+            </div>
+            <div class="work-card">
+                <h3>Health Sensing</h3>
+                <p>Thermal imaging, wearables, respiratory monitoring</p>
+                <span class="work-venue">UbiComp, ACM Health</span>
+            </div>
+            <div class="work-card">
+                <h3>Energy Analytics</h3>
+                <p>NILM, smart grid optimization, time-series forecasting</p>
+                <span class="work-venue">BuildSys, Test of Time</span>
+            </div>
+            <div class="work-card">
+                <h3>Foundation Models</h3>
+                <p>LLMs, VLMs, and multi-modal ML for sustainability</p>
+                <span class="work-venue">Emerging Area</span>
+            </div>
+        </div>
+
+        <!-- Infrastructure -->
+        <div class="infra-bar">
+            <span class="infra-text">4x NVIDIA A100 (80GB) &bull; RTX A5000 &bull; RTX A4000 &bull; Dedicated compute for all lab members</span>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section">
+            <div class="cta-header">
+                <h2 class="cta-title">Join Our <span class="highlight">Research</span></h2>
+                <p class="cta-subtitle">High-impact research with strong career outcomes</p>
+            </div>
+
+            <div class="cta-grid">
+                <div class="cta-column">
+                    <h4>Who Should Apply</h4>
+                    <ul class="cta-list">
+                        <li>Interest in ML + real-world sustainability impact</li>
+                        <li>Background in ML, CV, time-series, or systems</li>
+                        <li>Motivation to publish at top venues</li>
+                    </ul>
+                </div>
+                <div class="cta-column">
+                    <h4>Where Alumni Go</h4>
+                    <ul class="cta-list">
+                        <li>Google DeepMind, Microsoft Research</li>
+                        <li>PhD at CMU, Caltech, ETH Zurich, UCSD</li>
+                        <li>Fulbright, PMRF, MSR PhD Award</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="mailto:nipunbatra@iitgn.ac.in" class="cta-button primary">Email Prof. Nipun Batra</a>
+                <a href="https://sustainability-lab.github.io/" class="cta-button secondary">Visit Website</a>
+            </div>
+
+            <p class="apply-note">
+                <strong>How to apply:</strong> Send CV, transcript, and research interests. No deadline — we recruit year-round.
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-section">
+            <div class="supporters">
+                <span class="supporters-label">Supported by</span>
+                <span class="supporter">Google</span>
+                <span class="supporter">Microsoft</span>
+                <span class="supporter">NVIDIA</span>
+                <span class="supporter">Cisco</span>
+                <span class="supporter">DST</span>
+                <span class="supporter">SERB</span>
+            </div>
+            <div class="footer-url">sustainability-lab.github.io</div>
+        </div>
+    </div>
+</body>
+</html>
