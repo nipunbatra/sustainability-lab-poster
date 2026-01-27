@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us Posters - Sustainability Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Source Sans 3', system-ui, sans-serif;
+            background: linear-gradient(135deg, #0a1612 0%, #1a2f28 100%);
+            min-height: 100vh;
+            color: #e8f5e9;
+            padding: 3rem 1.5rem;
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #94a3b8;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+        .back-link:hover { color: #4ade80; }
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #4ade80, #22d3ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle {
+            text-align: center;
+            color: #94a3b8;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        .subtitle a { color: #4ade80; text-decoration: none; }
+        .subtitle a:hover { text-decoration: underline; }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #94a3b8;
+            margin: 2rem 0 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .posters {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .poster-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .poster-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+        }
+        .poster-img {
+            width: 100%;
+            aspect-ratio: 1100/1437;
+            object-fit: cover;
+            display: block;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .poster-info { padding: 1rem; }
+        .poster-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        .poster-links {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .poster-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.4rem 0.8rem;
+            background: rgba(74, 222, 128, 0.15);
+            color: #4ade80;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            border: 1px solid rgba(74, 222, 128, 0.3);
+            transition: all 0.2s;
+        }
+        .poster-link:hover {
+            background: rgba(74, 222, 128, 0.25);
+            border-color: #4ade80;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        .footer a { color: #4ade80; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; All Posters</a>
+
+        <h1>Join the Sustainability Lab</h1>
+        <p class="subtitle">Recruitment posters &bull; IIT Gandhinagar &bull; <a href="https://sustainability-lab.github.io" target="_blank">sustainability-lab.github.io</a></p>
+
+        <h2 class="section-title">Dark Themes</h2>
+        <div class="posters">
+            <div class="poster-card">
+                <a href="sustainability-lab-join-us-poster-v2.html"><img src="poster-v2-dark.png" alt="Green Dark" class="poster-img"></a>
+                <div class="poster-info">
+                    <h3 class="poster-title">Green Dark</h3>
+                    <div class="poster-links">
+                        <a href="sustainability-lab-join-us-poster-v2.html" class="poster-link">HTML</a>
+                        <a href="poster-v2-dark.pdf" class="poster-link">PDF</a>
+                        <a href="poster-v2-dark.png" class="poster-link">PNG</a>
+                    </div>
+                </div>
+            </div>
+            <div class="poster-card">
+                <a href="sustainability-lab-join-us-poster-v2-blue.html"><img src="poster-v2-blue.png" alt="Blue Dark" class="poster-img"></a>
+                <div class="poster-info">
+                    <h3 class="poster-title">Blue Dark</h3>
+                    <div class="poster-links">
+                        <a href="sustainability-lab-join-us-poster-v2-blue.html" class="poster-link">HTML</a>
+                        <a href="poster-v2-blue.pdf" class="poster-link">PDF</a>
+                        <a href="poster-v2-blue.png" class="poster-link">PNG</a>
+                    </div>
+                </div>
+            </div>
+            <div class="poster-card">
+                <a href="sustainability-lab-join-us-poster-v2-earth.html"><img src="poster-v2-earth.png" alt="Earth Dark" class="poster-img"></a>
+                <div class="poster-info">
+                    <h3 class="poster-title">Earth Dark</h3>
+                    <div class="poster-links">
+                        <a href="sustainability-lab-join-us-poster-v2-earth.html" class="poster-link">HTML</a>
+                        <a href="poster-v2-earth.pdf" class="poster-link">PDF</a>
+                        <a href="poster-v2-earth.png" class="poster-link">PNG</a>
+                    </div>
+                </div>
+            </div>
+            <div class="poster-card">
+                <a href="sustainability-lab-join-us-poster-v2-purple.html"><img src="poster-v2-purple.png" alt="Purple Dark" class="poster-img"></a>
+                <div class="poster-info">
+                    <h3 class="poster-title">Purple Dark</h3>
+                    <div class="poster-links">
+                        <a href="sustainability-lab-join-us-poster-v2-purple.html" class="poster-link">HTML</a>
+                        <a href="poster-v2-purple.pdf" class="poster-link">PDF</a>
+                        <a href="poster-v2-purple.png" class="poster-link">PNG</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Light Themes</h2>
+        <div class="posters">
+            <div class="poster-card">
+                <a href="sustainability-lab-join-us-poster-v2-light.html"><img src="poster-v2-light.png" alt="Green Light" class="poster-img"></a>
+                <div class="poster-info">
+                    <h3 class="poster-title">Green Light</h3>
+                    <div class="poster-links">
+                        <a href="sustainability-lab-join-us-poster-v2-light.html" class="poster-link">HTML</a>
+                        <a href="poster-v2-light.pdf" class="poster-link">PDF</a>
+                        <a href="poster-v2-light.png" class="poster-link">PNG</a>
+                    </div>
+                </div>
+            </div>
+            <div class="poster-card">
+                <a href="sustainability-lab-join-us-poster-v2-blue-light.html"><img src="poster-v2-blue-light.png" alt="Blue Light" class="poster-img"></a>
+                <div class="poster-info">
+                    <h3 class="poster-title">Blue Light</h3>
+                    <div class="poster-links">
+                        <a href="sustainability-lab-join-us-poster-v2-blue-light.html" class="poster-link">HTML</a>
+                        <a href="poster-v2-blue-light.pdf" class="poster-link">PDF</a>
+                        <a href="poster-v2-blue-light.png" class="poster-link">PNG</a>
+                    </div>
+                </div>
+            </div>
+            <div class="poster-card">
+                <a href="sustainability-lab-join-us-poster-v2-earth-light.html"><img src="poster-v2-earth-light.png" alt="Earth Light" class="poster-img"></a>
+                <div class="poster-info">
+                    <h3 class="poster-title">Earth Light</h3>
+                    <div class="poster-links">
+                        <a href="sustainability-lab-join-us-poster-v2-earth-light.html" class="poster-link">HTML</a>
+                        <a href="poster-v2-earth-light.pdf" class="poster-link">PDF</a>
+                        <a href="poster-v2-earth-light.png" class="poster-link">PNG</a>
+                    </div>
+                </div>
+            </div>
+            <div class="poster-card">
+                <a href="sustainability-lab-join-us-poster-v2-purple-light.html"><img src="poster-v2-purple-light.png" alt="Purple Light" class="poster-img"></a>
+                <div class="poster-info">
+                    <h3 class="poster-title">Purple Light</h3>
+                    <div class="poster-links">
+                        <a href="sustainability-lab-join-us-poster-v2-purple-light.html" class="poster-link">HTML</a>
+                        <a href="poster-v2-purple-light.pdf" class="poster-link">PDF</a>
+                        <a href="poster-v2-purple-light.png" class="poster-link">PNG</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="footer">
+            <a href="https://github.com/nipunbatra/sustainability-lab-poster" target="_blank">View on GitHub</a>
+        </p>
+    </div>
+</body>
+</html>

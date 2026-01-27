@@ -3,213 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sustainability Lab - Join Us Poster</title>
+    <title>Sustainability Lab Posters</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Source Sans 3', system-ui, sans-serif;
-            background: linear-gradient(135deg, #0a1612 0%, #1a2f28 100%);
+            background: linear-gradient(135deg, #0a0e0a 0%, #111a11 100%);
             min-height: 100vh;
-            color: #e8f5e9;
-            padding: 3rem 1.5rem;
+            color: #e8ebe8;
+            padding: 4rem 2rem;
         }
-        .container { max-width: 1400px; margin: 0 auto; }
+        .container { max-width: 1000px; margin: 0 auto; }
+
+        .header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
         h1 {
-            text-align: center;
-            font-size: 2.5rem;
+            font-family: 'Source Serif 4', serif;
+            font-size: 3rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, #4ade80, #22d3ee);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .subtitle {
-            text-align: center;
-            color: #94a3b8;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-        .subtitle a { color: #4ade80; text-decoration: none; }
-        .subtitle a:hover { text-decoration: underline; }
-
-        .section-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #94a3b8;
-            margin: 2rem 0 1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-align: center;
-        }
-
-        .posters {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-        .poster-card {
-            background: rgba(255,255,255,0.05);
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .poster-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-        }
-        .poster-img {
-            width: 100%;
-            aspect-ratio: 1100/1437;
-            object-fit: cover;
-            display: block;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-        .poster-info { padding: 1rem; }
-        .poster-title {
-            font-size: 1rem;
-            font-weight: 600;
             margin-bottom: 0.75rem;
+            letter-spacing: -1px;
         }
-        .poster-links {
+
+        .subtitle {
+            color: rgba(232, 235, 232, 0.6);
+            font-size: 1.15rem;
+            margin-bottom: 1rem;
+        }
+
+        .links {
             display: flex;
-            gap: 0.5rem;
+            justify-content: center;
+            gap: 1.5rem;
             flex-wrap: wrap;
         }
-        .poster-link {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.4rem 0.8rem;
+
+        .links a {
+            color: #4a7c4a;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .links a:hover {
+            color: #6ca06c;
+            text-decoration: underline;
+        }
+
+        .collections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .collection-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .collection-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            border-color: rgba(255,255,255,0.15);
+        }
+
+        .collection-preview {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4px;
+            padding: 4px;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .collection-preview img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .collection-info {
+            padding: 1.5rem;
+        }
+
+        .collection-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+        }
+
+        .badge-fellowship {
+            background: rgba(255, 153, 51, 0.15);
+            color: #FF9933;
+        }
+
+        .badge-recruitment {
             background: rgba(74, 222, 128, 0.15);
             color: #4ade80;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 0.8rem;
-            border: 1px solid rgba(74, 222, 128, 0.3);
-            transition: all 0.2s;
         }
-        .poster-link:hover {
-            background: rgba(74, 222, 128, 0.25);
-            border-color: #4ade80;
+
+        .collection-title {
+            font-family: 'Source Serif 4', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
         }
+
+        .collection-desc {
+            color: rgba(232, 235, 232, 0.6);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .collection-meta {
+            font-size: 0.85rem;
+            color: rgba(232, 235, 232, 0.4);
+        }
+
         .footer {
             text-align: center;
-            margin-top: 3rem;
-            color: #64748b;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            color: rgba(232, 235, 232, 0.4);
             font-size: 0.9rem;
         }
-        .footer a { color: #4ade80; text-decoration: none; }
-        .footer a:hover { text-decoration: underline; }
+
+        .footer a {
+            color: #4a7c4a;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Join the Sustainability Lab</h1>
-        <p class="subtitle">IIT Gandhinagar &bull; <a href="https://sustainability-lab.github.io" target="_blank">sustainability-lab.github.io</a></p>
+        <header class="header">
+            <h1>Sustainability Lab Posters</h1>
+            <p class="subtitle">Design assets for IIT Gandhinagar's Sustainability Lab</p>
+            <div class="links">
+                <a href="https://sustainability-lab.github.io" target="_blank">Lab Website</a>
+                <a href="https://github.com/nipunbatra/sustainability-lab-poster" target="_blank">GitHub Repo</a>
+            </div>
+        </header>
 
-        <h2 class="section-title">Dark Themes</h2>
-        <div class="posters">
-            <div class="poster-card">
-                <a href="sustainability-lab-join-us-poster-v2.html"><img src="poster-v2-dark.png" alt="Green Dark" class="poster-img"></a>
-                <div class="poster-info">
-                    <h3 class="poster-title">Green Dark</h3>
-                    <div class="poster-links">
-                        <a href="sustainability-lab-join-us-poster-v2.html" class="poster-link">HTML</a>
-                        <a href="poster-v2-dark.pdf" class="poster-link">PDF</a>
-                        <a href="poster-v2-dark.png" class="poster-link">PNG</a>
-                    </div>
+        <div class="collections">
+            <a href="india-ai-fellowship/" class="collection-card">
+                <div class="collection-preview">
+                    <img src="india-ai-fellowship/indiaai-fellowship-v2-dark.png" alt="Dark">
+                    <img src="india-ai-fellowship/indiaai-fellowship-v2-light.png" alt="Light">
+                    <img src="india-ai-fellowship/indiaai-fellowship-v3-minimal.png" alt="Minimal">
+                    <img src="india-ai-fellowship/indiaai-fellowship-v4-tricolor.png" alt="Tricolor">
                 </div>
-            </div>
-            <div class="poster-card">
-                <a href="sustainability-lab-join-us-poster-v2-blue.html"><img src="poster-v2-blue.png" alt="Blue Dark" class="poster-img"></a>
-                <div class="poster-info">
-                    <h3 class="poster-title">Blue Dark</h3>
-                    <div class="poster-links">
-                        <a href="sustainability-lab-join-us-poster-v2-blue.html" class="poster-link">HTML</a>
-                        <a href="poster-v2-blue.pdf" class="poster-link">PDF</a>
-                        <a href="poster-v2-blue.png" class="poster-link">PNG</a>
-                    </div>
+                <div class="collection-info">
+                    <span class="collection-badge badge-fellowship">Fellowship</span>
+                    <h2 class="collection-title">IndiaAI Fellowship 2025</h2>
+                    <p class="collection-desc">Celebrating three MTech scholars selected for national AI research excellence. LinkedIn-optimized 1200x1200px posters.</p>
+                    <p class="collection-meta">5 variants &bull; Dark, Light, Minimal, Tricolor</p>
                 </div>
-            </div>
-            <div class="poster-card">
-                <a href="sustainability-lab-join-us-poster-v2-earth.html"><img src="poster-v2-earth.png" alt="Earth Dark" class="poster-img"></a>
-                <div class="poster-info">
-                    <h3 class="poster-title">Earth Dark</h3>
-                    <div class="poster-links">
-                        <a href="sustainability-lab-join-us-poster-v2-earth.html" class="poster-link">HTML</a>
-                        <a href="poster-v2-earth.pdf" class="poster-link">PDF</a>
-                        <a href="poster-v2-earth.png" class="poster-link">PNG</a>
-                    </div>
+            </a>
+
+            <a href="join-us/" class="collection-card">
+                <div class="collection-preview">
+                    <img src="join-us/poster-v2-dark.png" alt="Green Dark">
+                    <img src="join-us/poster-v2-blue.png" alt="Blue Dark">
+                    <img src="join-us/poster-v2-light.png" alt="Green Light">
+                    <img src="join-us/poster-v2-purple.png" alt="Purple Dark">
                 </div>
-            </div>
-            <div class="poster-card">
-                <a href="sustainability-lab-join-us-poster-v2-purple.html"><img src="poster-v2-purple.png" alt="Purple Dark" class="poster-img"></a>
-                <div class="poster-info">
-                    <h3 class="poster-title">Purple Dark</h3>
-                    <div class="poster-links">
-                        <a href="sustainability-lab-join-us-poster-v2-purple.html" class="poster-link">HTML</a>
-                        <a href="poster-v2-purple.pdf" class="poster-link">PDF</a>
-                        <a href="poster-v2-purple.png" class="poster-link">PNG</a>
-                    </div>
+                <div class="collection-info">
+                    <span class="collection-badge badge-recruitment">Recruitment</span>
+                    <h2 class="collection-title">Join the Lab</h2>
+                    <p class="collection-desc">Recruitment posters for PhD, Postdoc, Research Associate, and Intern positions. Multiple color themes.</p>
+                    <p class="collection-meta">8 variants &bull; 4 Dark + 4 Light themes</p>
                 </div>
-            </div>
+            </a>
         </div>
 
-        <h2 class="section-title">Light Themes</h2>
-        <div class="posters">
-            <div class="poster-card">
-                <a href="sustainability-lab-join-us-poster-v2-light.html"><img src="poster-v2-light.png" alt="Green Light" class="poster-img"></a>
-                <div class="poster-info">
-                    <h3 class="poster-title">Green Light</h3>
-                    <div class="poster-links">
-                        <a href="sustainability-lab-join-us-poster-v2-light.html" class="poster-link">HTML</a>
-                        <a href="poster-v2-light.pdf" class="poster-link">PDF</a>
-                        <a href="poster-v2-light.png" class="poster-link">PNG</a>
-                    </div>
-                </div>
-            </div>
-            <div class="poster-card">
-                <a href="sustainability-lab-join-us-poster-v2-blue-light.html"><img src="poster-v2-blue-light.png" alt="Blue Light" class="poster-img"></a>
-                <div class="poster-info">
-                    <h3 class="poster-title">Blue Light</h3>
-                    <div class="poster-links">
-                        <a href="sustainability-lab-join-us-poster-v2-blue-light.html" class="poster-link">HTML</a>
-                        <a href="poster-v2-blue-light.pdf" class="poster-link">PDF</a>
-                        <a href="poster-v2-blue-light.png" class="poster-link">PNG</a>
-                    </div>
-                </div>
-            </div>
-            <div class="poster-card">
-                <a href="sustainability-lab-join-us-poster-v2-earth-light.html"><img src="poster-v2-earth-light.png" alt="Earth Light" class="poster-img"></a>
-                <div class="poster-info">
-                    <h3 class="poster-title">Earth Light</h3>
-                    <div class="poster-links">
-                        <a href="sustainability-lab-join-us-poster-v2-earth-light.html" class="poster-link">HTML</a>
-                        <a href="poster-v2-earth-light.pdf" class="poster-link">PDF</a>
-                        <a href="poster-v2-earth-light.png" class="poster-link">PNG</a>
-                    </div>
-                </div>
-            </div>
-            <div class="poster-card">
-                <a href="sustainability-lab-join-us-poster-v2-purple-light.html"><img src="poster-v2-purple-light.png" alt="Purple Light" class="poster-img"></a>
-                <div class="poster-info">
-                    <h3 class="poster-title">Purple Light</h3>
-                    <div class="poster-links">
-                        <a href="sustainability-lab-join-us-poster-v2-purple-light.html" class="poster-link">HTML</a>
-                        <a href="poster-v2-purple-light.pdf" class="poster-link">PDF</a>
-                        <a href="poster-v2-purple-light.png" class="poster-link">PNG</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <p class="footer">
-            <a href="https://github.com/nipunbatra/sustainability-lab-poster" target="_blank">View on GitHub</a>
-        </p>
+        <footer class="footer">
+            <p>Sustainability Lab &bull; IIT Gandhinagar &bull; <a href="https://sustainability-lab.github.io" target="_blank">sustainability-lab.github.io</a></p>
+        </footer>
     </div>
 </body>
 </html>

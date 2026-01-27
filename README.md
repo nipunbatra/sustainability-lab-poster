@@ -1,29 +1,58 @@
-# Sustainability Lab Recruitment Poster
+# Sustainability Lab Posters
 
-Join Us recruitment poster for Sustainability Lab at IIT Gandhinagar.
+Design assets and posters for the [Sustainability Lab](https://sustainability-lab.github.io) at IIT Gandhinagar.
 
-## Preview
+## Live Gallery
 
-### Dark Theme
-![Dark Theme Poster](poster-dark.png)
+**[View all posters →](https://nipunbatra.github.io/sustainability-lab-poster/)**
 
-### Light Theme
-![Light Theme Poster](poster-light.png)
+## Poster Collections
 
-## Live Preview
+### IndiaAI Fellowship 2025
 
-View the interactive HTML versions:
-- [Dark Theme](https://nipunbatra.github.io/sustainability-lab-poster/sustainability-lab-join-us-poster.html)
-- [Light Theme](https://nipunbatra.github.io/sustainability-lab-poster/sustainability-lab-join-us-poster-light.html)
+Celebrating three MTech scholars selected for the prestigious IndiaAI Fellowship:
 
-## Files
+- **Saaransh Shandilya** — VayuDrishti: LLM-Powered Insight into India's Air
+- **Balbir Prasad** — AI-Driven Emulators for Real-Time Air Quality & Climate Decision Support
+- **Parv Thacker** — SwasthaNidra: EdgeAI for Sleep Health in Resource-Limited Settings
 
-- `sustainability-lab-join-us-poster.html` - Dark theme poster
-- `sustainability-lab-join-us-poster-light.html` - Light theme poster
-- `sustainability-lab-join-us-poster.pdf` - Dark theme PDF
-- `sustainability-lab-join-us-poster-light.pdf` - Light theme PDF
+**[View posters →](https://nipunbatra.github.io/sustainability-lab-poster/india-ai-fellowship/)**
 
-## Generating PDFs
+| Variant | Preview |
+|---------|---------|
+| Clean Dark | ![Dark](india-ai-fellowship/indiaai-fellowship-v2-dark.png) |
+| Clean Light | ![Light](india-ai-fellowship/indiaai-fellowship-v2-light.png) |
+| Minimal White | ![Minimal](india-ai-fellowship/indiaai-fellowship-v3-minimal.png) |
+| Tricolor Accent | ![Tricolor](india-ai-fellowship/indiaai-fellowship-v4-tricolor.png) |
+
+### Join the Lab (Recruitment)
+
+Recruitment posters for PhD, Postdoc, Research Associate, and Intern positions.
+
+**[View posters →](https://nipunbatra.github.io/sustainability-lab-poster/join-us/)**
+
+Available in 8 color variants (4 dark + 4 light themes):
+- Green, Blue, Earth, Purple
+
+## Folder Structure
+
+```
+sustainability-lab-poster/
+├── index.html                    # Main gallery page
+├── india-ai-fellowship/          # IndiaAI Fellowship posters
+│   ├── index.html               # Fellowship gallery
+│   ├── *.html                   # Poster HTML files
+│   ├── *.png                    # Poster images
+│   └── generate-all.mjs         # PNG generation script
+├── join-us/                      # Recruitment posters
+│   ├── index.html               # Recruitment gallery
+│   ├── *.html                   # Poster HTML files
+│   ├── *.png                    # Poster images
+│   └── *.pdf                    # PDF versions
+└── README.md
+```
+
+## Generating Images
 
 Requires [Node.js](https://nodejs.org/) and [Puppeteer](https://pptr.dev/).
 
@@ -31,25 +60,20 @@ Requires [Node.js](https://nodejs.org/) and [Puppeteer](https://pptr.dev/).
 # Install dependencies
 npm install
 
-# Generate both PDFs
+# Generate IndiaAI Fellowship PNGs
+node india-ai-fellowship/generate-all.mjs
+
+# Generate recruitment poster PDFs
 make all
-
-# Or generate individually
-make dark    # Dark theme only
-make light   # Light theme only
 ```
-
-## Makefile Targets
-
-- `make all` - Generate both PDFs
-- `make dark` - Generate dark theme PDF only
-- `make light` - Generate light theme PDF only
-- `make clean` - Remove generated PDFs
-- `make open` - Open both PDFs in default viewer
-- `make watch` - Generate PDFs on file changes
 
 ## Tech Stack
 
 - HTML5 + CSS3
 - Google Fonts (Source Sans 3, Source Serif 4, Inter)
-- Puppeteer for PDF generation
+- Puppeteer for PDF/PNG generation
+- GitHub Pages for hosting
+
+## License
+
+These posters are for Sustainability Lab, IIT Gandhinagar use.

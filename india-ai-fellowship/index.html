@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndiaAI Fellowship 2025 - Sustainability Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Source Sans 3', system-ui, sans-serif;
+            background: linear-gradient(135deg, #0c1014 0%, #1a1f2e 100%);
+            min-height: 100vh;
+            color: #f0f0f0;
+            padding: 3rem 1.5rem;
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #94a3b8;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+        .back-link:hover { color: #FF9933; }
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        h1 span { color: #FF9933; }
+        .subtitle {
+            text-align: center;
+            color: #94a3b8;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .meta {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 2.5rem;
+            font-size: 0.95rem;
+        }
+        .meta a { color: #4ade80; text-decoration: none; }
+        .meta a:hover { text-decoration: underline; }
+
+        .posters {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .poster-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .poster-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+        }
+        .poster-img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            display: block;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .poster-info { padding: 1rem; }
+        .poster-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .poster-desc {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            margin-bottom: 0.75rem;
+        }
+        .poster-links {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .poster-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.4rem 0.8rem;
+            background: rgba(255, 153, 51, 0.15);
+            color: #FF9933;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            border: 1px solid rgba(255, 153, 51, 0.3);
+            transition: all 0.2s;
+        }
+        .poster-link:hover {
+            background: rgba(255, 153, 51, 0.25);
+            border-color: #FF9933;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        .footer a { color: #4ade80; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+
+        /* Tricolor accent */
+        .tricolor {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 1.5rem;
+        }
+        .tricolor span {
+            width: 40px;
+            height: 4px;
+            border-radius: 2px;
+        }
+        .tricolor span:nth-child(1) { background: #FF9933; }
+        .tricolor span:nth-child(2) { background: #fff; }
+        .tricolor span:nth-child(3) { background: #138808; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; All Posters</a>
+
+        <div class="tricolor"><span></span><span></span><span></span></div>
+        <h1><span>IndiaAI</span> Fellowship 2025</h1>
+        <p class="subtitle">Three MTech scholars selected for national AI research excellence</p>
+        <p class="meta">Sustainability Lab &bull; IIT Gandhinagar &bull; <a href="https://sustainability-lab.github.io" target="_blank">sustainability-lab.github.io</a></p>
+
+        <div class="posters">
+            <div class="poster-card">
+                <a href="indiaai-fellowship-v2-dark.html"><img src="indiaai-fellowship-v2-dark.png" alt="Dark Theme" class="poster-img"></a>
+                <div class="poster-info">
+                    <h3 class="poster-title">Clean Dark</h3>
+                    <p class="poster-desc">Matches lab's existing dark poster style</p>
+                    <div class="poster-links">
+                        <a href="indiaai-fellowship-v2-dark.html" class="poster-link">HTML</a>
+                        <a href="indiaai-fellowship-v2-dark.png" class="poster-link">PNG</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="poster-card">
+                <a href="indiaai-fellowship-v2-light.html"><img src="indiaai-fellowship-v2-light.png" alt="Light Theme" class="poster-img"></a>
+                <div class="poster-info">
+                    <h3 class="poster-title">Clean Light</h3>
+                    <p class="poster-desc">Professional light theme</p>
+                    <div class="poster-links">
+                        <a href="indiaai-fellowship-v2-light.html" class="poster-link">HTML</a>
+                        <a href="indiaai-fellowship-v2-light.png" class="poster-link">PNG</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="poster-card">
+                <a href="indiaai-fellowship-v3-minimal.html"><img src="indiaai-fellowship-v3-minimal.png" alt="Minimal" class="poster-img"></a>
+                <div class="poster-info">
+                    <h3 class="poster-title">Minimal White</h3>
+                    <p class="poster-desc">Ultra-clean editorial style</p>
+                    <div class="poster-links">
+                        <a href="indiaai-fellowship-v3-minimal.html" class="poster-link">HTML</a>
+                        <a href="indiaai-fellowship-v3-minimal.png" class="poster-link">PNG</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="poster-card">
+                <a href="indiaai-fellowship-v4-tricolor.html"><img src="indiaai-fellowship-v4-tricolor.png" alt="Tricolor" class="poster-img"></a>
+                <div class="poster-info">
+                    <h3 class="poster-title">Tricolor Accent</h3>
+                    <p class="poster-desc">Each card with tricolor accent</p>
+                    <div class="poster-links">
+                        <a href="indiaai-fellowship-v4-tricolor.html" class="poster-link">HTML</a>
+                        <a href="indiaai-fellowship-v4-tricolor.png" class="poster-link">PNG</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="poster-card">
+                <a href="indiaai-fellowship-poster.html"><img src="indiaai-fellowship-poster.png" alt="Original" class="poster-img"></a>
+                <div class="poster-info">
+                    <h3 class="poster-title">Rich Celebratory</h3>
+                    <p class="poster-desc">Animated rings, detailed design</p>
+                    <div class="poster-links">
+                        <a href="indiaai-fellowship-poster.html" class="poster-link">HTML</a>
+                        <a href="indiaai-fellowship-poster.png" class="poster-link">PNG</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="footer">
+            <a href="https://github.com/nipunbatra/sustainability-lab-poster" target="_blank">View on GitHub</a>
+        </p>
+    </div>
+</body>
+</html>

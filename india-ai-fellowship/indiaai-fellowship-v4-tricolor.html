@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndiaAI Fellowship 2025 - Tricolor Edition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --saffron: #FF9933;
+            --white: #FFFFFF;
+            --green: #138808;
+            --navy: #000080;
+            --bg: #0c1014;
+            --text: #f0f0f0;
+            --text-secondary: rgba(240, 240, 240, 0.7);
+            --text-muted: rgba(240, 240, 240, 0.4);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #1a1a1a;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .poster {
+            width: 1200px;
+            height: 1200px;
+            background: var(--bg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Background gradient mesh */
+        .bg-gradient {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 0% 0%, rgba(255, 153, 51, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 100% 100%, rgba(19, 136, 8, 0.12) 0%, transparent 50%);
+        }
+
+        /* Content wrapper */
+        .content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 55px 65px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .tricolor-line {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .tricolor-line span {
+            width: 60px;
+            height: 4px;
+            border-radius: 2px;
+        }
+
+        .tricolor-line span:nth-child(1) { background: var(--saffron); }
+        .tricolor-line span:nth-child(2) { background: var(--white); }
+        .tricolor-line span:nth-child(3) { background: var(--green); }
+
+        .announcement {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--saffron);
+            margin-bottom: 16px;
+        }
+
+        .main-title {
+            font-family: 'Source Serif 4', serif;
+            font-size: 62px;
+            font-weight: 700;
+            color: var(--text);
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+            line-height: 1.1;
+        }
+
+        .main-title span {
+            color: var(--saffron);
+        }
+
+        .subtitle {
+            font-size: 17px;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        /* Fellows Grid */
+        .fellows-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 35px;
+        }
+
+        .fellow-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fellow-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+        }
+
+        .fellow-card:nth-child(1)::before { background: var(--saffron); }
+        .fellow-card:nth-child(2)::before { background: var(--white); }
+        .fellow-card:nth-child(3)::before { background: var(--green); }
+
+        .fellow-photo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .fellow-card:nth-child(1) .fellow-photo { border: 3px solid var(--saffron); }
+        .fellow-card:nth-child(2) .fellow-photo { border: 3px solid rgba(255, 255, 255, 0.5); }
+        .fellow-card:nth-child(3) .fellow-photo { border: 3px solid var(--green); }
+
+        .fellow-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .fellow-name {
+            font-family: 'Source Serif 4', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .fellow-badge {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 18px;
+        }
+
+        .fellow-card:nth-child(1) .fellow-badge { color: var(--saffron); }
+        .fellow-card:nth-child(2) .fellow-badge { color: rgba(255, 255, 255, 0.6); }
+        .fellow-card:nth-child(3) .fellow-badge { color: var(--green); }
+
+        .project-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+
+        .project-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.45;
+        }
+
+        /* Stats row */
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            padding: 30px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            margin-bottom: 35px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: 'Source Serif 4', serif;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .stat:nth-child(1) .stat-value { color: var(--saffron); }
+        .stat:nth-child(2) .stat-value { color: var(--white); }
+        .stat:nth-child(3) .stat-value { color: var(--green); }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-top: 6px;
+        }
+
+        /* Bottom section */
+        .bottom {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .lab-brand {
+        }
+
+        .lab-name {
+            font-family: 'Source Serif 4', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .lab-tagline {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .lab-url {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--saffron);
+            margin-top: 8px;
+        }
+
+        .fellowship-brand {
+            text-align: right;
+        }
+
+        .india-ai-logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: flex-end;
+        }
+
+        .india-ai-logo span {
+            color: var(--saffron);
+        }
+
+        .ministry-text {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .iitgn {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <div class="bg-gradient"></div>
+
+        <div class="content">
+            <!-- Header -->
+            <header class="header">
+                <div class="tricolor-line">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="announcement">Fellowship Announcement</div>
+                <h1 class="main-title"><span>IndiaAI</span> Fellowship 2025</h1>
+                <p class="subtitle">Three MTech scholars selected for national AI research excellence</p>
+            </header>
+
+            <!-- Fellows -->
+            <div class="fellows-grid">
+                <div class="fellow-card">
+                    <div class="fellow-photo">
+                        <img src="Saaransh.jpg" alt="Saaransh Shandilya">
+                    </div>
+                    <h3 class="fellow-name">Saaransh Shandilya</h3>
+                    <div class="fellow-badge">MTech Fellow</div>
+                    <div class="project-name">VayuDrishti</div>
+                    <div class="project-desc">LLM-Powered Insight into India's Air Quality</div>
+                </div>
+
+                <div class="fellow-card">
+                    <div class="fellow-photo">
+                        <img src="Balbir.jpg" alt="Balbir Prasad">
+                    </div>
+                    <h3 class="fellow-name">Balbir Prasad</h3>
+                    <div class="fellow-badge">MTech Fellow</div>
+                    <div class="project-name">AI Climate Emulators</div>
+                    <div class="project-desc">Real-Time Air Quality & Climate Decision Support</div>
+                </div>
+
+                <div class="fellow-card">
+                    <div class="fellow-photo">
+                        <img src="Parv.jpg" alt="Parv Thacker">
+                    </div>
+                    <h3 class="fellow-name">Parv Thacker</h3>
+                    <div class="fellow-badge">MTech Fellow</div>
+                    <div class="project-name">SwasthaNidra</div>
+                    <div class="project-desc">EdgeAI for Sleep Health in Resource-Limited Settings</div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-row">
+                <div class="stat">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">Fellows Selected</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">AI for Good Projects</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">1</div>
+                    <div class="stat-label">Research Lab</div>
+                </div>
+            </div>
+
+            <!-- Bottom -->
+            <div class="bottom">
+                <div class="lab-brand">
+                    <div class="lab-name">Sustainability Lab</div>
+                    <div class="lab-tagline">AI for Climate, Health & Energy Research</div>
+                    <div class="lab-url">sustainability-lab.github.io</div>
+                </div>
+                <div class="fellowship-brand">
+                    <div class="india-ai-logo"><span>India</span>AI Mission</div>
+                    <div class="ministry-text">Government of India &bull; Ministry of Electronics & IT</div>
+                    <div class="iitgn">IIT Gandhinagar</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

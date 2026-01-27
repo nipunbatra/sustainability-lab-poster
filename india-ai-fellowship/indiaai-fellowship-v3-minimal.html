@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndiaAI Fellowship 2025 - Minimal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --text: #111;
+            --text-secondary: #555;
+            --text-muted: #888;
+            --accent: #e67300;
+            --accent-green: #138808;
+            --teal: #0d7a7a;
+            --border: #e5e5e5;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f0f0f0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .poster {
+            width: 1200px;
+            height: 1200px;
+            background: var(--bg);
+            padding: 60px 70px;
+            position: relative;
+        }
+
+        /* Tricolor accent - left side */
+        .tricolor-left {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 8px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tricolor-left span:nth-child(1) { flex: 1; background: #FF9933; }
+        .tricolor-left span:nth-child(2) { flex: 1; background: #fff; border-right: 1px solid #ddd; }
+        .tricolor-left span:nth-child(3) { flex: 1; background: var(--accent-green); }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-top: 10px;
+        }
+
+        .badge-row {
+            margin-bottom: 20px;
+        }
+
+        .fellowship-badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+            padding: 8px 20px;
+            border-radius: 30px;
+        }
+
+        .main-title {
+            font-family: 'Source Serif 4', serif;
+            font-size: 72px;
+            font-weight: 700;
+            color: var(--text);
+            letter-spacing: -2px;
+            margin-bottom: 12px;
+            line-height: 1;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        /* Fellows */
+        .fellows-section {
+            margin-bottom: 50px;
+        }
+
+        .section-label {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .fellows-row {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .fellow {
+            text-align: center;
+            width: 300px;
+        }
+
+        .fellow-photo {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            border: 4px solid var(--border);
+        }
+
+        .fellow-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .fellow-name {
+            font-family: 'Source Serif 4', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+
+        .fellow-title {
+            font-size: 12px;
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 18px;
+        }
+
+        .project-block {
+            background: #f8f8f8;
+            border-radius: 10px;
+            padding: 18px 20px;
+        }
+
+        .project-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+
+        .project-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.45;
+        }
+
+        /* Divider */
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+            margin: 40px 0;
+        }
+
+        /* Info bar */
+        .info-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .info-item {
+            text-align: center;
+        }
+
+        .info-value {
+            font-family: 'Source Serif 4', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--teal);
+        }
+
+        .info-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+
+        /* Bottom section */
+        .bottom-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .lab-info {
+
+        }
+
+        .lab-name {
+            font-family: 'Source Serif 4', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .lab-meta {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .fellowship-brand {
+            text-align: right;
+        }
+
+        .india-ai {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .india-ai span {
+            color: var(--accent);
+        }
+
+        .ministry {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .url {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--teal);
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <div class="tricolor-left"><span></span><span></span><span></span></div>
+
+        <header class="header">
+            <div class="badge-row">
+                <span class="fellowship-badge">IndiaAI Fellowship 2025</span>
+            </div>
+            <h1 class="main-title">Three Fellows Selected</h1>
+            <p class="subtitle">National AI research excellence from Sustainability Lab, IIT Gandhinagar</p>
+        </header>
+
+        <section class="fellows-section">
+            <div class="section-label">MTech Fellows</div>
+            <div class="fellows-row">
+                <div class="fellow">
+                    <div class="fellow-photo">
+                        <img src="Saaransh.jpg" alt="Saaransh Shandilya">
+                    </div>
+                    <h3 class="fellow-name">Saaransh Shandilya</h3>
+                    <div class="fellow-title">MTech Fellow</div>
+                    <div class="project-block">
+                        <div class="project-name">VayuDrishti</div>
+                        <div class="project-desc">LLM-Powered Insight into India's Air Quality</div>
+                    </div>
+                </div>
+
+                <div class="fellow">
+                    <div class="fellow-photo">
+                        <img src="Balbir.jpg" alt="Balbir Prasad">
+                    </div>
+                    <h3 class="fellow-name">Balbir Prasad</h3>
+                    <div class="fellow-title">MTech Fellow</div>
+                    <div class="project-block">
+                        <div class="project-name">AI Climate Emulators</div>
+                        <div class="project-desc">Real-Time Air Quality & Climate Decision Support</div>
+                    </div>
+                </div>
+
+                <div class="fellow">
+                    <div class="fellow-photo">
+                        <img src="Parv.jpg" alt="Parv Thacker">
+                    </div>
+                    <h3 class="fellow-name">Parv Thacker</h3>
+                    <div class="fellow-title">MTech Fellow</div>
+                    <div class="project-block">
+                        <div class="project-name">SwasthaNidra</div>
+                        <div class="project-desc">EdgeAI for Sleep Health in Resource-Limited Settings</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <div class="info-bar">
+            <div class="info-item">
+                <div class="info-value">3</div>
+                <div class="info-label">Fellows</div>
+            </div>
+            <div class="info-item">
+                <div class="info-value">3</div>
+                <div class="info-label">AI for Good Projects</div>
+            </div>
+            <div class="info-item">
+                <div class="info-value">1</div>
+                <div class="info-label">Research Lab</div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="bottom-section">
+            <div class="lab-info">
+                <div class="lab-name">Sustainability Lab</div>
+                <div class="lab-meta">IIT Gandhinagar &bull; AI for Climate, Health & Energy</div>
+                <div class="url">sustainability-lab.github.io</div>
+            </div>
+            <div class="fellowship-brand">
+                <div class="india-ai"><span>India</span>AI Mission</div>
+                <div class="ministry">Ministry of Electronics & IT</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
