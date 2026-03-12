@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability Lab - About &amp; Awards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --blue-dark: #1a3a5c;
+            --blue-mid: #2563eb;
+            --blue-light: #3b82f6;
+            --orange: #f59e0b;
+            --orange-dark: #d97706;
+            --bg-white: #ffffff;
+            --bg-light: #f8fafc;
+            --bg-cream: #fffbeb;
+            --text-dark: #1e293b;
+            --text-mid: #475569;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-white);
+            color: var(--text-dark);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .poster {
+            width: 1000px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        /* ── HEADER ── */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 28px 40px;
+            background: var(--bg-white);
+            border-bottom: 4px solid var(--orange);
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .lab-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--blue-dark);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        .lab-name-top {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: var(--text-dark);
+        }
+
+        .lab-name-bottom {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            color: var(--text-light);
+        }
+
+        .header-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .iitgn-seal {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--bg-light);
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--blue-dark);
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        .header-right {
+            text-align: right;
+        }
+
+        .prof-name {
+            font-family: 'Source Serif 4', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--blue-dark);
+        }
+
+        .prof-url {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--blue-light);
+            margin-bottom: 6px;
+        }
+
+        .prof-inst {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.3;
+        }
+
+        /* ── BIO SECTION ── */
+        .bio-section {
+            padding: 28px 40px;
+            background: var(--bg-light);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .bio-photo {
+            flex-shrink: 0;
+            width: 130px;
+            height: 150px;
+            border-radius: 12px;
+            background: var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: var(--text-light);
+            text-align: center;
+            border: 3px solid var(--orange);
+        }
+
+        .bio-text {
+            font-size: 15px;
+            color: var(--text-dark);
+            line-height: 1.65;
+        }
+
+        .bio-name {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-mid);
+            margin-top: 8px;
+        }
+
+        /* ── AWARDS ── */
+        .awards-section {
+            padding: 28px 40px;
+            background: var(--bg-cream);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .awards-title {
+            font-family: 'Source Serif 4', serif;
+            font-size: 30px;
+            font-weight: 800;
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 40px;
+        }
+
+        .award-item {
+            font-size: 14px;
+            color: var(--text-dark);
+            line-height: 1.5;
+            padding-left: 18px;
+            position: relative;
+        }
+
+        .award-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--orange);
+        }
+
+        /* ── ALUMNI + SPONSORS ── */
+        .bottom-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .alumni-section {
+            padding: 24px 40px;
+            border-right: 1px solid var(--border);
+        }
+
+        .sponsors-section {
+            padding: 24px 40px;
+        }
+
+        .section-title {
+            font-family: 'Source Serif 4', serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .section-title.orange {
+            color: var(--orange-dark);
+        }
+
+        .section-title.blue {
+            color: var(--blue-dark);
+        }
+
+        .alumni-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .alumni-tag {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--blue-dark);
+            background: var(--bg-light);
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .sponsors-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sponsor-tag {
+            font-size: 13px;
+            font-weight: 600;
+            padding: 8px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--bg-light);
+            color: var(--text-mid);
+        }
+
+        .sponsor-tag.highlight {
+            background: var(--orange);
+            color: var(--text-dark);
+            border-color: var(--orange-dark);
+            font-weight: 700;
+        }
+
+        /* ── MEDIA COVERAGE ── */
+        .media-section {
+            padding: 24px 40px;
+            background: var(--blue-dark);
+        }
+
+        .media-title {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--bg-white);
+            text-align: center;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .media-card {
+            background: var(--bg-white);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .media-img {
+            width: 100%;
+            height: 140px;
+            background: var(--bg-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: var(--text-light);
+            text-align: center;
+            padding: 8px;
+        }
+
+        .media-caption {
+            padding: 8px 10px;
+            font-size: 11px;
+            color: var(--text-mid);
+            line-height: 1.4;
+            text-align: center;
+        }
+
+        /* ── FOOTER ── */
+        .footer {
+            padding: 16px 40px;
+            background: var(--orange);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-left {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .footer-right {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--blue-dark);
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+
+        <!-- ── HEADER ── -->
+        <div class="header">
+            <div class="header-left">
+                <div class="lab-icon">&Lscr;</div>
+                <div>
+                    <div class="lab-name-top">Sustainability</div>
+                    <div class="lab-name-bottom">L &nbsp; A &nbsp; B</div>
+                </div>
+            </div>
+            <div class="header-center">
+                <div class="iitgn-seal">IIT<br>Gandhinagar</div>
+            </div>
+            <div class="header-right">
+                <div class="prof-name">Professor Nipun Batra</div>
+                <div class="prof-url">sustainability-lab.github.io</div>
+                <div class="prof-inst">Indian Institute of Technology<br>Gandhinagar</div>
+            </div>
+        </div>
+
+        <!-- ── BIO ── -->
+        <div class="bio-section">
+            <div class="bio-photo">[Photo of<br>Prof. Batra]</div>
+            <div>
+                <div class="bio-text">
+                    Nipun Batra is an Associate Professor of Computer Science at IIT Gandhinagar. He completed his postdoctoral research at the University of Virginia and earned his PhD from IIIT Delhi. His research group focuses on utilizing machine learning and sensing technologies to address computational sustainability challenges, particularly in smart buildings, air quality, and healthcare.
+                </div>
+                <div class="bio-name">Prof. Nipun Batra</div>
+            </div>
+        </div>
+
+        <!-- ── AWARDS ── -->
+        <div class="awards-section">
+            <div class="awards-title">Awards</div>
+            <div class="awards-grid">
+                <div class="award-item">ACM SIGEnergy Rising Star 2025 Award</div>
+                <div class="award-item">PhD student Zeel Patel awarded Microsoft PhD fellowship 2024 (one in ten in India)</div>
+                <div class="award-item">ACM SIGEnergy Test of Time Award</div>
+                <div class="award-item">PhD student Rishiraj Adhikary is a finalist in the ACM Ubicomp (A*) graduate award</div>
+                <div class="award-item">Excellence in Teaching Award by IIT Gandhinagar 2024</div>
+                <div class="award-item">PhD student Rishiraj Adhikary selected for prestigious Lindau Laureate Program 2024</div>
+                <div class="award-item">Young Alumni Award from IIIT Delhi 2023</div>
+                <div class="award-item">PhD student Rishiraj Adhikary won the Fulbright Nehru visitation fellowship (1 in 3 in STEM that year)</div>
+                <div class="award-item">Keynote talk at ACM COMPASS 2024 Doctoral Colloquium</div>
+                <div class="award-item">MTech Student Ankita Jain won Gold Medal in Research in 2023 convocation</div>
+                <div class="award-item">Best Graduate Presentation at ACM SenSys 2015 (first and only winner from India)</div>
+                <div class="award-item">PhD student Rishiraj Adhikary won Commendation for Outstanding Research (PhD) in 2025 convocation</div>
+                <div class="award-item">Best demo award at ACM BuildSys 2014</div>
+                <div class="award-item"></div>
+            </div>
+        </div>
+
+        <!-- ── ALUMNI + SPONSORS ── -->
+        <div class="bottom-section">
+            <div class="alumni-section">
+                <div class="section-title orange">Alumni Across the Globe</div>
+                <div class="alumni-grid">
+                    <span class="alumni-tag">Caltech</span>
+                    <span class="alumni-tag">UMass Amherst</span>
+                    <span class="alumni-tag">Oracle</span>
+                    <span class="alumni-tag">Univ. of Illinois</span>
+                    <span class="alumni-tag">Microsoft Research</span>
+                    <span class="alumni-tag">UC San Diego</span>
+                    <span class="alumni-tag">Carnegie Mellon</span>
+                    <span class="alumni-tag">Google DeepMind</span>
+                    <span class="alumni-tag">Cambridge</span>
+                </div>
+            </div>
+            <div class="sponsors-section">
+                <div class="section-title blue">Sponsors</div>
+                <div class="sponsors-grid">
+                    <span class="sponsor-tag highlight">Google</span>
+                    <span class="sponsor-tag">DST</span>
+                    <span class="sponsor-tag highlight">Cisco</span>
+                    <span class="sponsor-tag">STARS</span>
+                    <span class="sponsor-tag highlight">Microsoft</span>
+                    <span class="sponsor-tag">MoEFCC</span>
+                    <span class="sponsor-tag">SERB</span>
+                    <span class="sponsor-tag highlight">NVIDIA</span>
+                    <span class="sponsor-tag">Jio</span>
+                    <span class="sponsor-tag highlight">CoE in AI (MHRD)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── MEDIA COVERAGE ── -->
+        <div class="media-section">
+            <div class="media-title">Media Coverage</div>
+            <div class="media-grid">
+                <div class="media-card">
+                    <div class="media-img">[The Live Ahmedabad<br>article image]</div>
+                    <div class="media-caption">IIT Gandhinagar AI Pinpoints Optimal Locations for Air-Quality Sensors</div>
+                </div>
+                <div class="media-card">
+                    <div class="media-img">[Gujarati newspaper<br>article image]</div>
+                    <div class="media-caption">Air Pollution Network Design coverage in Gujarati media</div>
+                </div>
+                <div class="media-card">
+                    <div class="media-img">[Ahmedabad Mirror<br>article image]</div>
+                    <div class="media-caption">IIT-Gn chatbot eases air pollution data</div>
+                </div>
+                <div class="media-card">
+                    <div class="media-img">[SpiroMask / Fulbright<br>article image]</div>
+                    <div class="media-caption">IIT-Gn researchers devise mask to measure lung health</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── FOOTER ── -->
+        <div class="footer">
+            <div class="footer-left">Professor Nipun Batra &bull; sustainability-lab.github.io</div>
+            <div class="footer-right">Indian Institute of Technology Gandhinagar</div>
+        </div>
+
+    </div>
+</body>
+</html>

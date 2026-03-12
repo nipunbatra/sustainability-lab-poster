@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability Lab - Open Positions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-deep: #050808;
+            --bg-primary: #0a0f0e;
+            --bg-card: #0f1716;
+            --bg-card-hover: #141e1c;
+            --accent-emerald: #10b981;
+            --accent-teal: #14b8a6;
+            --accent-cyan: #06b6d4;
+            --accent-dim: rgba(16, 185, 129, 0.15);
+            --accent-glow: rgba(16, 185, 129, 0.08);
+            --text-primary: #f0fdf4;
+            --text-secondary: rgba(240, 253, 244, 0.72);
+            --text-muted: rgba(240, 253, 244, 0.42);
+            --border: rgba(255, 255, 255, 0.07);
+            --border-accent: rgba(16, 185, 129, 0.2);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .poster {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ── Subtle background texture ── */
+        .poster::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse 800px 600px at 20% 10%, rgba(16, 185, 129, 0.06), transparent),
+                radial-gradient(ellipse 600px 400px at 80% 85%, rgba(6, 182, 212, 0.04), transparent);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .poster > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── HERO SECTION ── */
+        .hero {
+            padding: 52px 60px 40px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-top-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+
+        .hero-iit {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .hero-dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--accent-emerald);
+        }
+
+        .hero-hiring {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--bg-deep);
+            background: var(--accent-emerald);
+            padding: 5px 14px;
+            border-radius: 4px;
+        }
+
+        .hero-headline {
+            font-family: 'Source Serif 4', serif;
+            font-size: 64px;
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -2.5px;
+            margin-bottom: 8px;
+        }
+
+        .hero-headline .line-green {
+            background: linear-gradient(135deg, var(--accent-emerald), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-sub {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            line-height: 1.45;
+        }
+
+        .hero-lab {
+            font-family: 'Source Serif 4', serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .hero-lab-sub {
+            font-size: 13px;
+            color: var(--text-muted);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        /* ── BIG STATS ROW ── */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .stat-cell {
+            padding: 28px 24px;
+            text-align: center;
+            border-right: 1px solid var(--border);
+        }
+
+        .stat-cell:last-child {
+            border-right: none;
+        }
+
+        .stat-number {
+            font-family: 'Source Serif 4', serif;
+            font-size: 38px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-emerald), var(--accent-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        /* ── AWARDS STRIP ── */
+        .awards-strip {
+            padding: 22px 60px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .award-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .award-icon {
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: var(--accent-dim);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: var(--accent-emerald);
+            border: 1px solid var(--border-accent);
+        }
+
+        .award-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .award-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+
+        .award-sub {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        /* ── POSITIONS (Role Cards) ── */
+        .positions-section {
+            padding: 40px 60px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-emerald);
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .role-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .role-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-emerald), var(--accent-cyan));
+        }
+
+        .role-name {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+        }
+
+        .role-benefits {
+            list-style: none;
+        }
+
+        .role-benefits li {
+            font-size: 13px;
+            color: var(--text-secondary);
+            padding: 5px 0;
+            padding-left: 16px;
+            position: relative;
+            line-height: 1.45;
+        }
+
+        .role-benefits li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 11px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent-emerald);
+            opacity: 0.7;
+        }
+
+        /* ── RESEARCH AREAS ── */
+        .research-section {
+            padding: 40px 60px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+
+        .research-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 22px 20px;
+            text-align: center;
+        }
+
+        .research-emoji {
+            font-size: 28px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .research-card h3 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .research-card p {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .research-venues {
+            margin-top: 8px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--accent-teal);
+            letter-spacing: 0.5px;
+        }
+
+        /* ── INFRA + VENUES COMBO ── */
+        .proof-section {
+            padding: 0 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .proof-block {
+            padding: 24px 0;
+        }
+
+        .proof-block:first-child {
+            border-right: 1px solid var(--border);
+            padding-right: 30px;
+        }
+
+        .proof-block:last-child {
+            padding-left: 30px;
+        }
+
+        .proof-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .gpu-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .gpu-chip {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent-emerald);
+            background: var(--accent-dim);
+            padding: 6px 14px;
+            border-radius: 6px;
+            border: 1px solid var(--border-accent);
+        }
+
+        .gpu-note {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+
+        .venues-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .venue-chip {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            background: var(--bg-card);
+            padding: 6px 14px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+
+        /* ── WHY JOIN STRIP ── */
+        .why-strip {
+            padding: 28px 60px;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(6, 182, 212, 0.05));
+            border-bottom: 1px solid var(--border);
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        .why-item {
+            text-align: center;
+        }
+
+        .why-icon {
+            font-size: 22px;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .why-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 3px;
+        }
+
+        .why-desc {
+            font-size: 11px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* ── ALUMNI OUTCOMES ── */
+        .alumni-section {
+            padding: 28px 60px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .alumni-flow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .alumni-tag {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            padding: 8px 16px;
+            border-radius: 8px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+        }
+
+        .alumni-tag.highlight {
+            border-color: var(--border-accent);
+            color: var(--accent-emerald);
+        }
+
+        .alumni-arrow {
+            color: var(--text-muted);
+            font-size: 16px;
+        }
+
+        /* ── CTA FOOTER ── */
+        .cta-footer {
+            padding: 36px 60px 28px;
+            text-align: center;
+        }
+
+        .cta-main-text {
+            font-family: 'Source Serif 4', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .cta-main-text .em {
+            background: linear-gradient(135deg, var(--accent-emerald), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cta-how {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .cta-how strong {
+            color: var(--text-primary);
+        }
+
+        .cta-actions {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 14px 28px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: transform 0.15s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .cta-btn.primary {
+            background: linear-gradient(135deg, var(--accent-emerald), #059669);
+            color: #fff;
+            box-shadow: 0 4px 24px rgba(16, 185, 129, 0.25);
+        }
+
+        .cta-btn.secondary {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .cta-meta {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        /* ── BOTTOM BAR ── */
+        .bottom-bar {
+            padding: 20px 60px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .funders {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .funders-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .funder {
+            font-size: 13px;
+            font-weight: 500;
+            color: rgba(255,255,255,0.35);
+        }
+
+        .bottom-url {
+            font-size: 15px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-emerald), var(--accent-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+
+        <!-- ── HERO ── -->
+        <section class="hero">
+            <div class="hero-top-bar">
+                <span class="hero-iit">IIT Gandhinagar</span>
+                <span class="hero-dot"></span>
+                <span class="hero-hiring">Open Positions</span>
+            </div>
+            <h1 class="hero-headline">
+                Build AI That Shapes<br>
+                <span class="line-green">Climate, Health & Energy</span>
+            </h1>
+            <p class="hero-sub">Join a research group deploying machine learning and sensing<br>technologies for real-world sustainability impact</p>
+            <div class="hero-lab">Sustainability Lab</div>
+            <div class="hero-lab-sub">Prof. Nipun Batra</div>
+        </section>
+
+        <!-- ── BIG STATS ── -->
+        <div class="stats-row">
+            <div class="stat-cell">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Publications</div>
+            </div>
+            <div class="stat-cell">
+                <div class="stat-number">6</div>
+                <div class="stat-label">Top Venues</div>
+            </div>
+            <div class="stat-cell">
+                <div class="stat-number">4&times;A100</div>
+                <div class="stat-label">GPU Cluster</div>
+            </div>
+            <div class="stat-cell">
+                <div class="stat-number">3</div>
+                <div class="stat-label">IndiaAI Fellows</div>
+            </div>
+        </div>
+
+        <!-- ── AWARDS ── -->
+        <div class="awards-strip">
+            <div class="award-item">
+                <div class="award-icon">&starf;</div>
+                <div class="award-text">
+                    <span class="award-title">ACM SIGEnergy Rising Star</span>
+                    <span class="award-sub">Prof. Nipun Batra, 2025</span>
+                </div>
+            </div>
+            <div class="award-item">
+                <div class="award-icon">&starf;</div>
+                <div class="award-text">
+                    <span class="award-title">Test of Time Award</span>
+                    <span class="award-sub">NILMTK, ACM eEnergy 2025</span>
+                </div>
+            </div>
+            <div class="award-item">
+                <div class="award-icon">&starf;</div>
+                <div class="award-text">
+                    <span class="award-title">Microsoft Research PhD</span>
+                    <span class="award-sub">Zeel B Patel, 2024</span>
+                </div>
+            </div>
+            <div class="award-item">
+                <div class="award-icon">&starf;</div>
+                <div class="award-text">
+                    <span class="award-title">Excellence in Teaching</span>
+                    <span class="award-sub">IIT Gandhinagar, 2025</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── OPEN POSITIONS ── -->
+        <section class="positions-section">
+            <div class="section-label">Open Positions</div>
+            <div class="roles-grid">
+                <div class="role-card">
+                    <div class="role-name">PhD Scholars</div>
+                    <ul class="role-benefits">
+                        <li>Full funding with institute fellowship</li>
+                        <li>Conference travel to top venues worldwide</li>
+                        <li>Dedicated A100 GPU access for your research</li>
+                        <li>Structured research bootcamp on joining</li>
+                    </ul>
+                </div>
+                <div class="role-card">
+                    <div class="role-name">Postdocs & RAs</div>
+                    <ul class="role-benefits">
+                        <li>Define your own research direction</li>
+                        <li>Grant-writing and mentoring opportunities</li>
+                        <li>Collaborate with Google, Microsoft, NVIDIA</li>
+                        <li>N-PDF and external fellowship support</li>
+                    </ul>
+                </div>
+                <div class="role-card">
+                    <div class="role-name">Interns</div>
+                    <ul class="role-benefits">
+                        <li>3-6 month projects on active research</li>
+                        <li>Publication-track mentorship</li>
+                        <li>Access to lab compute and datasets</li>
+                        <li>Strong letters for grad school / industry</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── RESEARCH AREAS ── -->
+        <section class="research-section">
+            <div class="section-label">What We Work On</div>
+            <div class="research-grid">
+                <div class="research-card">
+                    <span class="research-emoji" role="img" aria-label="air">&#x1F32C;</span>
+                    <h3>Air Quality &<br>Climate</h3>
+                    <p>Satellite CV, brick kiln detection, LLM-powered policy tools</p>
+                    <div class="research-venues">NeurIPS &middot; AAAI &middot; JCSS</div>
+                </div>
+                <div class="research-card">
+                    <span class="research-emoji" role="img" aria-label="health">&#x1FA7A;</span>
+                    <h3>Health<br>Sensing</h3>
+                    <p>Thermal imaging, respiratory monitoring, sleep health</p>
+                    <div class="research-venues">UbiComp &middot; ACM Health</div>
+                </div>
+                <div class="research-card">
+                    <span class="research-emoji" role="img" aria-label="energy">&#x26A1;</span>
+                    <h3>Energy<br>Analytics</h3>
+                    <p>NILM, smart grid, time-series forecasting, optimization</p>
+                    <div class="research-venues">BuildSys &middot; Test of Time</div>
+                </div>
+                <div class="research-card">
+                    <span class="research-emoji" role="img" aria-label="ai">&#x1F916;</span>
+                    <h3>Foundation<br>Models</h3>
+                    <p>LLMs, VLMs, multi-modal ML, thermal VQA benchmarks</p>
+                    <div class="research-venues">Emerging &middot; ThermEval</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── COMPUTE + VENUES ── -->
+        <div class="proof-section">
+            <div class="proof-block">
+                <div class="proof-label">Compute Infrastructure</div>
+                <div class="gpu-row">
+                    <span class="gpu-chip">4&times; A100 80GB</span>
+                    <span class="gpu-chip">RTX A5000</span>
+                    <span class="gpu-chip">RTX A4000</span>
+                </div>
+                <div class="gpu-note">Dedicated allocation for every lab member</div>
+            </div>
+            <div class="proof-block">
+                <div class="proof-label">Published At</div>
+                <div class="venues-row">
+                    <span class="venue-chip">NeurIPS</span>
+                    <span class="venue-chip">AAAI</span>
+                    <span class="venue-chip">UbiComp</span>
+                    <span class="venue-chip">KDD</span>
+                    <span class="venue-chip">BuildSys</span>
+                    <span class="venue-chip">JCSS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── WHY JOIN ── -->
+        <div class="why-strip">
+            <div class="why-item">
+                <span class="why-icon" role="img">&#x1F393;</span>
+                <div class="why-title">Mentorship</div>
+                <div class="why-desc">Structured bootcamp, weekly 1:1s</div>
+            </div>
+            <div class="why-item">
+                <span class="why-icon" role="img">&#x1F30D;</span>
+                <div class="why-title">Real Impact</div>
+                <div class="why-desc">AI deployed for climate & health</div>
+            </div>
+            <div class="why-item">
+                <span class="why-icon" role="img">&#x2708;&#xFE0F;</span>
+                <div class="why-title">Travel</div>
+                <div class="why-desc">Present at international venues</div>
+            </div>
+            <div class="why-item">
+                <span class="why-icon" role="img">&#x1F4BB;</span>
+                <div class="why-title">Compute</div>
+                <div class="why-desc">A100 GPUs for every member</div>
+            </div>
+            <div class="why-item">
+                <span class="why-icon" role="img">&#x1F680;</span>
+                <div class="why-title">Career</div>
+                <div class="why-desc">Alumni at DeepMind, MSR, CMU</div>
+            </div>
+        </div>
+
+        <!-- ── ALUMNI ── -->
+        <div class="alumni-section">
+            <div class="proof-label" style="text-align:center; margin-bottom: 14px;">Where Our Alumni Go</div>
+            <div class="alumni-flow">
+                <span class="alumni-tag highlight">Google DeepMind</span>
+                <span class="alumni-tag highlight">Microsoft Research</span>
+                <span class="alumni-tag">CMU</span>
+                <span class="alumni-tag">Cambridge</span>
+                <span class="alumni-tag">Caltech</span>
+                <span class="alumni-tag">ETH Zurich</span>
+                <span class="alumni-tag">UCSD</span>
+                <span class="alumni-tag">Fulbright</span>
+                <span class="alumni-tag">PMRF</span>
+            </div>
+        </div>
+
+        <!-- ── CTA ── -->
+        <section class="cta-footer">
+            <div class="cta-main-text">Ready to <span class="em">build AI for good</span>?</div>
+            <p class="cta-how">
+                <strong>Send:</strong> CV + transcript + brief research interests &nbsp;&middot;&nbsp; <strong>Rolling review</strong> &mdash; no deadline
+            </p>
+            <div class="cta-actions">
+                <a href="mailto:nipun.batra@iitgn.ac.in" class="cta-btn primary">Email Prof. Nipun Batra</a>
+                <a href="https://sustainability-lab.github.io/" class="cta-btn secondary">Lab Website</a>
+            </div>
+            <div class="cta-meta">nipun.batra@iitgn.ac.in</div>
+        </section>
+
+        <!-- ── BOTTOM ── -->
+        <div class="bottom-bar">
+            <div class="funders">
+                <span class="funders-label">Funded by</span>
+                <span class="funder">Google</span>
+                <span class="funder">Microsoft</span>
+                <span class="funder">NVIDIA</span>
+                <span class="funder">Cisco</span>
+                <span class="funder">DST</span>
+                <span class="funder">SERB</span>
+                <span class="funder">Jio</span>
+            </div>
+            <div class="bottom-url">sustainability-lab.github.io</div>
+        </div>
+
+    </div>
+</body>
+</html>

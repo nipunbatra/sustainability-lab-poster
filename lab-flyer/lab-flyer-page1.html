@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability Lab - Research Flyer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --blue-dark: #1a3a5c;
+            --blue-mid: #2563eb;
+            --blue-light: #3b82f6;
+            --orange: #f59e0b;
+            --orange-dark: #d97706;
+            --bg-white: #ffffff;
+            --bg-light: #f8fafc;
+            --text-dark: #1e293b;
+            --text-mid: #475569;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-white);
+            color: var(--text-dark);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .poster {
+            width: 1000px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        /* ── HEADER ── */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 28px 40px;
+            background: var(--bg-white);
+            border-bottom: 4px solid var(--orange);
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .lab-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--blue-dark);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        .lab-name {
+            font-family: 'Source Sans 3', sans-serif;
+        }
+
+        .lab-name-top {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: var(--text-dark);
+        }
+
+        .lab-name-bottom {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            color: var(--text-light);
+        }
+
+        .header-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .iitgn-seal {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--bg-light);
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--blue-dark);
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        .header-right {
+            text-align: right;
+        }
+
+        .prof-name {
+            font-family: 'Source Serif 4', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--blue-dark);
+        }
+
+        .prof-url {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--blue-light);
+            margin-bottom: 6px;
+        }
+
+        .prof-inst {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.3;
+        }
+
+        /* ── CONTENT AREA ── */
+        .content {
+            padding: 24px 32px;
+            background: var(--blue-dark);
+        }
+
+        /* ── SECTION HEADERS ── */
+        .section-header {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--orange);
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .section-header.left {
+            text-align: left;
+        }
+
+        /* ── PROJECT GRID ── */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+
+        .project-card {
+            background: var(--bg-white);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .project-img {
+            width: 100%;
+            height: 110px;
+            background: var(--bg-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: var(--text-light);
+            text-align: center;
+            padding: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .project-body {
+            padding: 10px 12px 12px;
+        }
+
+        .project-title {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 2px;
+            line-height: 1.3;
+        }
+
+        .project-venue {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--blue-light);
+            margin-bottom: 6px;
+        }
+
+        .project-desc {
+            font-size: 11px;
+            color: var(--text-mid);
+            line-height: 1.45;
+        }
+
+        /* ── TWO-COLUMN SECTIONS ── */
+        .two-col-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 4px;
+        }
+
+        /* ── RESOURCES BAR ── */
+        .resources-bar {
+            background: var(--orange);
+            padding: 20px 32px;
+            text-align: center;
+        }
+
+        .resources-title {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .resources-text {
+            font-size: 14px;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .resources-text strong {
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+
+        <!-- ── HEADER ── -->
+        <div class="header">
+            <div class="header-left">
+                <div class="lab-icon">&Lscr;</div>
+                <div class="lab-name">
+                    <div class="lab-name-top">Sustainability</div>
+                    <div class="lab-name-bottom">L &nbsp; A &nbsp; B</div>
+                </div>
+            </div>
+            <div class="header-center">
+                <div class="iitgn-seal">IIT<br>Gandhinagar</div>
+            </div>
+            <div class="header-right">
+                <div class="prof-name">Professor Nipun Batra</div>
+                <div class="prof-url">sustainability-lab.github.io</div>
+                <div class="prof-inst">Indian Institute of Technology<br>Gandhinagar</div>
+            </div>
+        </div>
+
+        <!-- ── MAIN CONTENT ── -->
+        <div class="content">
+
+            <!-- Health & Energy Analytics row -->
+            <div class="two-col-header">
+                <div class="section-header left">Health</div>
+                <div class="section-header">Energy Analytics</div>
+            </div>
+
+            <div class="project-grid">
+                <!-- Row 1 -->
+                <div class="project-card">
+                    <div class="project-img">[ApneaEye figure]</div>
+                    <div class="project-body">
+                        <div class="project-title">ApneaEye</div>
+                        <div class="project-desc">A thermal camera-based, non-intrusive system to monitor Respiration signals during sleep.</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">[JoulesEye figure]</div>
+                    <div class="project-body">
+                        <div class="project-title">JoulesEye</div>
+                        <div class="project-venue">IMWUT 2024 &amp; ACM Ubicomp 2024</div>
+                        <div class="project-desc">A Thermal camera system that accurately estimates calorie expenditure during exercise by monitoring respiration rate.</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">[EdgeNILM figure]</div>
+                    <div class="project-body">
+                        <div class="project-title">EdgeNILM</div>
+                        <div class="project-venue">BuildSys 2020</div>
+                        <div class="project-desc">A multi-task learning approach to compress neural networks for efficient Non-Intrusive Load Monitoring (NILM).</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">[Active Collaborative Sensing figure]</div>
+                    <div class="project-body">
+                        <div class="project-title">Active Collaborative Sensing</div>
+                        <div class="project-venue">CIKM 2019</div>
+                        <div class="project-desc">A cost-efficient approach for accurate appliance-level energy breakdown with minimal sensor deployment.</div>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="project-card">
+                    <div class="project-img">[SpiroMask figure]</div>
+                    <div class="project-body">
+                        <div class="project-title">SpiroMask</div>
+                        <div class="project-venue">ACM Health 2023</div>
+                        <div class="project-desc">A smart mask with integrated microphones for accurate, non-invasive lung health monitoring.</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">[Continuous Respiration Rate figure]</div>
+                    <div class="project-body">
+                        <div class="project-title">Continuous Respiration Rate</div>
+                        <div class="project-venue">UbiComp 2022</div>
+                        <div class="project-desc">A CO&#x2082; sensor in an N95 mask enables continuous respiration rate monitoring during walking and rest.</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">[Scalable Energy Breakdown figure]</div>
+                    <div class="project-body">
+                        <div class="project-title">Scalable Energy Breakdown</div>
+                        <div class="project-venue">AAAI 2017</div>
+                        <div class="project-desc">Matrix factorization method for energy breakdown in homes without requiring additional hardware installation.</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">[It's Different figure]</div>
+                    <div class="project-body">
+                        <div class="project-title">It's Different</div>
+                        <div class="project-venue">BuildSys 2013</div>
+                        <div class="project-desc">A sensor network deployment for monitoring energy, water, and ambient parameters in a Delhi home.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Air Quality -->
+            <div class="section-header">Air Quality</div>
+
+            <div class="project-grid">
+                <!-- Row 3 -->
+                <div class="project-card">
+                    <div class="project-img">[SentinelKilnDB figure]</div>
+                    <div class="project-body">
+                        <div class="project-title">SentinelKilnDB</div>
+                        <div class="project-venue">NeurIPS 2025</div>
+                        <div class="project-desc">A Large-Scale Dataset and Benchmark for OBB Brick Kiln Detection in South Asia Using Satellite Imagery.</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">[VayuChat figure]</div>
+                    <div class="project-body">
+                        <div class="project-title">VayuChat and VayuBench</div>
+                        <div class="project-venue">CODS 2025</div>
+                        <div class="project-desc">LLM-Powered Chatbot and Benchmarks to Democratize Air Quality Insights for the masses.</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">[AQ Sensor Placement figure]</div>
+                    <div class="project-body">
+                        <div class="project-title">AQ Sensor Placement</div>
+                        <div class="project-venue">AAAI 2026</div>
+                        <div class="project-desc">Recommending sensor installation based using machine learning/information theory.</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">[AirInequalityBench figure]</div>
+                    <div class="project-body">
+                        <div class="project-title">AirInequalityBench</div>
+                        <div class="project-desc">Benchmarking LLMs to Reveal and Address Biases in Air Pollution Predictions.</div>
+                    </div>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="project-card">
+                    <div class="project-img">[AirDelhi figure]</div>
+                    <div class="project-body">
+                        <div class="project-title">AirDelhi</div>
+                        <div class="project-venue">NeurIPS 2023</div>
+                        <div class="project-desc">A novel mobile sensor based dataset for Delhi, enabling air pollution analysis and benchmarking.</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">[Scalable AQ Inference figure]</div>
+                    <div class="project-body">
+                        <div class="project-title">Scalable AQ Inference</div>
+                        <div class="project-venue">AAAI 2022</div>
+                        <div class="project-desc">Gaussian processes method with advanced kernels for accurate air quality estimation.</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">[AI Emulators figure]</div>
+                    <div class="project-body">
+                        <div class="project-title">AI Emulators</div>
+                        <div class="project-desc">Neural networks replacing differential equations in atmospheric modeling.</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">[Space to Policy figure]</div>
+                    <div class="project-body">
+                        <div class="project-title">Space to Policy</div>
+                        <div class="project-venue">ACM JCSS 2025</div>
+                        <div class="project-desc">A Scalable system that Automates Brick Kiln Detection with Geospatial Data.</div>
+                    </div>
+                </div>
+
+                <!-- Row 5 -->
+                <div class="project-card">
+                    <div class="project-img">[Samachar figure]</div>
+                    <div class="project-body">
+                        <div class="project-title">Samachar</div>
+                        <div class="project-venue">COMPASS 2022</div>
+                        <div class="project-desc">Reveals temporal and geographical biases in Indian media's air pollution coverage.</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">[Vartalaap figure]</div>
+                    <div class="project-body">
+                        <div class="project-title">Vartalaap</div>
+                        <div class="project-venue">CSCW 2021</div>
+                        <div class="project-desc">Analyzing public perception of air pollution in Delhi using Twitter data and NLP techniques.</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">[Vayu figure]</div>
+                    <div class="project-body">
+                        <div class="project-title">Vayu</div>
+                        <div class="project-desc">Python library for air quality data visualisations.</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">[Foundation Remote Sensing figure]</div>
+                    <div class="project-body">
+                        <div class="project-title">Foundational Remote Sensing Model</div>
+                        <div class="project-desc">Pre-trained transformer for scalable Earth observation tasks.</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ── RESOURCES BAR ── -->
+        <div class="resources-bar">
+            <div class="resources-title">Lab Computational Resources</div>
+            <div class="resources-text">
+                The Lab features modern computational servers with up to <strong>512GB RAM, 64 CPUs</strong> and Intel Xeon processors for intensive computational tasks. The following are the high-end GPUs: <strong>4xNVIDIA A100 (4x80 GB), 2xNVIDIA RTX A5000 (24GB), 2xRTX A4000 (2x16GB), 1xNVIDIA RTX A2000</strong> and Titan XP.
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
